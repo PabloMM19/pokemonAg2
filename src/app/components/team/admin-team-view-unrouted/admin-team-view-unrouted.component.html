@@ -1,0 +1,25 @@
+<button style="margin-left: 84%;">Crear</button>
+<table style="width: 75%; text-align: center; margin-left: 12%;">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre del Equipo</th>
+      <th>Descripción</th>
+      <th>Entrenador</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let team of teamData">
+      <td>{{team.id}}</td>
+      <td>{{team.nombre}}</td>
+      <td>{{team.descripcion}}</td>
+      <td>{{team.entrenador?.username}}</td>
+      <td>
+        <button class="btn btn-success" (click)="verEquipos(team)">Ver</button>&nbsp;
+        <button class="btn btn-primary">Editar</button>&nbsp;
+        <button class="btn btn-danger">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

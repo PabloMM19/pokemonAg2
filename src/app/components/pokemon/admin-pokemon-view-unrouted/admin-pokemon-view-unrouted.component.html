@@ -1,0 +1,47 @@
+<button style="margin-left: 84%;">Crear</button>
+<table style="width: 75%; text-align: center; margin-left: 12%;">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Tipo</th>
+      <th>Ataques</th>
+      <th>Generación</th>
+      <th>Habilidad</th>
+      <th>Ataque</th>
+      <th>Defensa</th>
+      <th>Ataque Especial</th>
+      <th>Defensa Especial</th>
+      <th>Velocidad</th>
+      <th>Salud</th>
+      <th>Objeto</th>
+      <th>Naturaleza</th>
+      <th>Nivel</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pokemon of pokemonData">
+      <td>{{pokemon.id}}</td>
+      <td>{{pokemon.nombre}}</td>
+      <td>{{pokemon.tipo1}} / {{pokemon.tipo2}}</td>
+      <td>{{pokemon.ataque1}}, {{pokemon.ataque2}}, {{pokemon.ataque3}}, {{pokemon.ataque4}}</td>
+      <td>{{pokemon.generacion}}</td>
+      <td>{{pokemon.habilidad}}</td>
+      <td>{{pokemon.ataque}}</td>
+      <td>{{pokemon.defensa}}</td>
+      <td>{{pokemon.ataque_Especial}}</td>
+      <td>{{pokemon.defensa_Especial}}</td>
+      <td>{{pokemon.velocidad}}</td>
+      <td>{{pokemon.salud}}</td>
+      <td>{{pokemon.objeto}}</td>
+      <td>{{pokemon.naturaleza}}</td>
+      <td>{{pokemon.nivel}}</td>
+      <td>
+        <button class="btn btn-success" (click)="verPokemon(pokemon)">Ver</button>&nbsp;
+        <button class="btn btn-primary">Editar</button>&nbsp;
+        <button class="btn btn-danger">Eliminar</button>
+    </tr>
+    <!-- Agrega más filas según sea necesario para los demás Pokémon -->
+  </tbody>
+</table>

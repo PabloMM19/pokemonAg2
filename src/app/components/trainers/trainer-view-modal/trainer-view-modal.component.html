@@ -1,0 +1,13 @@
+<div class="modal-header">
+  <h4 class="modal-title">{{ trainer.username }}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <p>{{trainer.id}}</p>
+  <p>{{trainer.username}}</p>
+  <p>{{trainer.email}}</p>
+  <p *ngIf="trainer.role==0">Administrador</p>
+  <p *ngIf="trainer.role==1">Usuario </p>
+</div>

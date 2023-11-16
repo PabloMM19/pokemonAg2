@@ -1,0 +1,23 @@
+<div class="modal-header">
+  <h4 class="modal-title">{{ pokemon.nombre }}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <p>ID: {{ pokemon.id }}</p>
+  <p>Nombre: {{ pokemon.nombre }}</p>
+  <p>Tipo: {{ pokemon.tipo1 }} / {{ pokemon.tipo2 }}</p>
+  <p>Ataques: {{ pokemon.ataque1 }}, {{ pokemon.ataque2 }}, {{ pokemon.ataque3 }}, {{ pokemon.ataque4 }}</p>
+  <p>Generación: {{ pokemon.generacion }}</p>
+  <p>Habilidad: {{ pokemon.habilidad }}</p>
+  <p>Ataque: {{ pokemon.ataque }}</p>
+  <p>Defensa: {{ pokemon.defensa }}</p>
+  <p>Ataque Especial: {{ pokemon.ataque_Especial }}</p>
+  <p>Defensa Especial: {{ pokemon.defensa_Especial }}</p>
+  <p>Velocidad: {{ pokemon.velocidad }}</p>
+  <p>Salud: {{ pokemon.salud }}</p>
+  <p>Objeto: {{ pokemon.objeto }}</p>
+  <p>Naturaleza: {{ pokemon.naturaleza }}</p>
+  <p>Nivel: {{ pokemon.nivel }}</p>
+</div>
