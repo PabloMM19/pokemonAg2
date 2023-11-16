@@ -15,6 +15,11 @@ import { FooterAppComponent } from './components/shared/footer/footerApp/footerA
 import { HomeAppComponent } from './components/home/homeApp/homeApp.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AdminTrainerEditComponent } from './components/trainers/admin-trainer-edit/admin-trainer-edit.component';
+import { AdminTrainerNewComponent } from './components/trainers/admin-trainer-new/admin-trainer-new.component';
+import { AdminTrainerFormComponent } from './components/trainers/admin-trainer-form/admin-trainer-form.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,6 +33,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MenuAppComponent,
     FooterAppComponent,
     HomeAppComponent,
+    AdminTrainerNewComponent,
+    AdminTrainerEditComponent,
+    AdminTrainerFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +43,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     RouterModule,
     HttpClientModule,
     NgbModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

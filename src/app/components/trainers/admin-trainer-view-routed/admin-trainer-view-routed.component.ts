@@ -14,7 +14,7 @@ export class AdminTrainerViewRoutedComponent implements OnInit {
   constructor(private dataService: TrainerService) {}
 
   ngOnInit(): void {
-    this.dataService.getPokemonData().subscribe((data: ITrainerData) => {
+    this.dataService.getTrainerData().subscribe((data: ITrainerData) => {
       this.trainerData = data.content;
       console.log(data); // Imprime los datos en la consola para verificar
     });

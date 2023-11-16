@@ -1,5 +1,5 @@
 
-<button style="margin-left: 84%;">Crear</button>
+<button class="btn btn-secondary" style="margin-left: 84%;" routerLink="/trainers/new">Crear</button>
 <table style="width: 75%; text-align: center; margin-left: 12%;">
   <thead>
     <tr>
@@ -19,8 +19,8 @@
       <td *ngIf="trainer.role==1">Usuario</td>
       <td>
         <button class="btn btn-success" (click)="verTrainer(trainer)">Ver</button> &nbsp;
-        <button class="btn btn-primary">Editar</button> &nbsp;
-        <button class="btn btn-danger">Eliminar</button>
+        <button class="btn btn-primary" routerLink="/trainers/edit/{{trainer.id}}">Editar</button> &nbsp;
+        <button class="btn btn-danger" (click)="eliminarTrainer(trainer.id)">Eliminar</button>
       </td>
     </tr>
   </tbody>
