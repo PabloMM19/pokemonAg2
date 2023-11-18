@@ -20,6 +20,9 @@ import { AdminTrainerNewComponent } from './components/trainers/admin-trainer-ne
 import { AdminTrainerFormComponent } from './components/trainers/admin-trainer-form/admin-trainer-form.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AdminTeamFormComponent } from './components/team/admin-team-form/admin-team-form.component';
+import { AdminTeamEditComponent } from './components/team/admin-team-edit/admin-team-edit.component';
+import { AdminTeamNewComponent } from './components/team/admin-team-new/admin-team-new.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     AdminTrainerNewComponent,
     AdminTrainerEditComponent,
     AdminTrainerFormComponent,
+    AdminTeamFormComponent,
+    AdminTeamNewComponent,
+    AdminTeamEditComponent
   ],
   imports: [
     BrowserModule,

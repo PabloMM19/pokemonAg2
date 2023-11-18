@@ -15,7 +15,7 @@ export class AdminTeamViewRoutedComponent implements OnInit {
   constructor(private dataService: TeamService) {}
 
   ngOnInit(): void {
-    this.dataService.getPokemonData().subscribe((data: ITeamData) => {
+    this.dataService.getTeamData().subscribe((data: ITeamData) => {
       this.teamData = data.content;
       console.log(data); // Imprime los datos en la consola para verificar
     });

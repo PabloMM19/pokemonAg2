@@ -6,6 +6,8 @@ import { AdminTeamViewRoutedComponent } from './components/team/admin-team-view-
 import { HomeAppComponent } from './components/home/homeApp/homeApp.component';
 import { AdminTrainerNewComponent } from './components/trainers/admin-trainer-new/admin-trainer-new.component';
 import { AdminTrainerEditComponent } from './components/trainers/admin-trainer-edit/admin-trainer-edit.component';
+import { AdminTeamNewComponent } from './components/team/admin-team-new/admin-team-new.component';
+import { AdminTeamEditComponent } from './components/team/admin-team-edit/admin-team-edit.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -14,8 +16,9 @@ const routes: Routes = [
   { path: 'pokemon', component: AdminPokemonViewRoutedComponent },
   { path: 'teams', component: AdminTeamViewRoutedComponent },
   { path: 'trainers/new', component: AdminTrainerNewComponent },
-  { path: 'trainers/edit', component: AdminTrainerEditComponent },
   { path: 'trainers/edit/:id', component: AdminTrainerEditComponent },
+  { path: 'teams/new', component: AdminTeamNewComponent },
+  { path: 'teams/edit/:id', component: AdminTeamEditComponent },
 ];
 
 @NgModule({

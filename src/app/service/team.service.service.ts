@@ -11,7 +11,15 @@ export class TeamService {
 
   constructor(private http: HttpClient) { }
 
-  getPokemonData(): Observable<ITeamData> {
+  getTeamData(): Observable<ITeamData> {
     return this.http.get<ITeamData>(`${this.apiUrl}/equipo`);
+  }
+
+  createTeam(team: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/equipo`, team);
+  }
+
+  deleteTeam(teamId: number): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/equipo/${teamId}`);
   }
 }
