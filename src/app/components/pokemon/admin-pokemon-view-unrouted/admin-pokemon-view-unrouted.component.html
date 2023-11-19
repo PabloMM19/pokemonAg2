@@ -1,5 +1,5 @@
-<button style="margin-left: 84%;" class="btn btn-secondary">Crear</button>
-<table style="width: 75%; text-align: center; margin-left: 12%;">
+<div class="contenido">
+<table class="table table-responsive table-sm table-hoverable table-bordered">
   <thead>
     <tr>
       <th>ID</th>
@@ -39,9 +39,29 @@
       <td>{{pokemon.nivel}}</td>
       <td>
         <button class="btn btn-success" (click)="verPokemon(pokemon)">Ver</button>&nbsp;
-        <button class="btn btn-primary">Editar</button>&nbsp;
-        <button class="btn btn-danger">Eliminar</button>
+        <button class="btn btn-primary" routerLink="/pokemon/edit/{{pokemon.id}}">Editar</button>&nbsp;
+        <button class="btn btn-danger" (click)="eliminarPokemon(pokemon.id)">Eliminar</button>
     </tr>
     <!-- Agrega más filas según sea necesario para los demás Pokémon -->
   </tbody>
 </table>
+<div class="pagination">
+  <button class="btn btn-primary" (click)="goToFirstPage()"><<</button>&nbsp;
+  <button class="btn btn-primary" (click)="prevPage()"><</button>&nbsp;
+
+  <select style="text-align: center;" [(ngModel)]="currentPage" class="form-control" (change)="currentPage !== null ? goToPage(currentPage) : null">
+    <option *ngFor="let page of pages" [value]="page" [selected]="page === currentPage">{{ page + 1 }}</option>
+  </select>&nbsp;
+
+  <button class="btn btn-primary" (click)="nextPage()">></button>&nbsp;
+  <button class="btn btn-primary" (click)="goToLastPage()">>></button>
+</div>
+<div class="acciones">
+  <button class="btn btn-warning" (click)="createMultiplePokemon(10)">+10</button>&nbsp;
+  <button class="btn btn-warning" (click)="createMultiplePokemon(50)">+50</button>&nbsp;
+  <button class="btn btn-secondary" routerLink="/pokemon/new">Crear</button>&nbsp;
+  <button class="btn btn-warning" (click)="createMultiplePokemon(100)">+100</button>&nbsp;
+  <button class="btn btn-danger" routerLink="/teams/new">Vaciar</button>
+
+</div>
+</div>

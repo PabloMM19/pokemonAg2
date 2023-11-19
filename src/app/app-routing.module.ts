@@ -8,6 +8,8 @@ import { AdminTrainerNewComponent } from './components/trainers/admin-trainer-ne
 import { AdminTrainerEditComponent } from './components/trainers/admin-trainer-edit/admin-trainer-edit.component';
 import { AdminTeamNewComponent } from './components/team/admin-team-new/admin-team-new.component';
 import { AdminTeamEditComponent } from './components/team/admin-team-edit/admin-team-edit.component';
+import { AdminPokemonNewComponent } from './components/pokemon/admin-pokemon-new/admin-pokemon-new.component';
+import { AdminPokemonEditComponent } from './components/pokemon/admin-pokemon-edit/admin-pokemon-edit.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -19,6 +21,8 @@ const routes: Routes = [
   { path: 'trainers/edit/:id', component: AdminTrainerEditComponent },
   { path: 'teams/new', component: AdminTeamNewComponent },
   { path: 'teams/edit/:id', component: AdminTeamEditComponent },
+  { path: 'pokemon/new', component: AdminPokemonNewComponent },
+  { path: 'pokemon/edit/:id', component: AdminPokemonEditComponent },
 ];
 
 @NgModule({

@@ -1,5 +1,9 @@
+import { IPaginationInfo } from "./pagination.model";
+
 export interface IPokemonData {
 content: IPokemon[];
+totalPages: number;
+    paginationInfo: IPaginationInfo;
 }
 
 export interface IPokemon {

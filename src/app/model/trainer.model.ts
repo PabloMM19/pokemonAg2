@@ -1,5 +1,9 @@
+import { IPaginationInfo } from "./pagination.model";
+
 export interface ITrainerData {
     content: ITrainer[];
+    totalPages: number;
+    paginationInfo: IPaginationInfo;
     }
     
     export interface ITrainer {

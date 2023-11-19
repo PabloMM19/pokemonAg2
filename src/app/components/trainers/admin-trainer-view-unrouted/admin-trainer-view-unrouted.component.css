@@ -1,15 +1,19 @@
-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-top: 20px;
-  }
+.contenido {
+  margin-left:5%;
+  margin-right:5%;
+}
 
-  th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
+.pagination {
+  width: 25%;
+  text-align: center;
+  /*center the pagination*/
+  margin: 0 auto;
+  margin-top:2%;
+}
 
-  th {
-    background-color: #f2f2f2;
-  }
+.acciones {
+  text-align: center;
+  margin:0 auto;
+  margin-top: 2%;
+  margin-bottom:6%;
+}

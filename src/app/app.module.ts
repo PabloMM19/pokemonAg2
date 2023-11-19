@@ -23,6 +23,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AdminTeamFormComponent } from './components/team/admin-team-form/admin-team-form.component';
 import { AdminTeamEditComponent } from './components/team/admin-team-edit/admin-team-edit.component';
 import { AdminTeamNewComponent } from './components/team/admin-team-new/admin-team-new.component';
+import { AdminPokemonNewComponent } from './components/pokemon/admin-pokemon-new/admin-pokemon-new.component';
+import { AdminPokemonEditComponent } from './components/pokemon/admin-pokemon-edit/admin-pokemon-edit.component';
+import { AdminPokemonFormComponent } from './components/pokemon/admin-pokemon-form/admin-pokemon-form.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,10 @@ import { AdminTeamNewComponent } from './components/team/admin-team-new/admin-te
     AdminTrainerFormComponent,
     AdminTeamFormComponent,
     AdminTeamNewComponent,
-    AdminTeamEditComponent
+    AdminTeamEditComponent,
+    AdminPokemonFormComponent,
+    AdminPokemonNewComponent,
+    AdminPokemonEditComponent
   ],
   imports: [
     BrowserModule,
