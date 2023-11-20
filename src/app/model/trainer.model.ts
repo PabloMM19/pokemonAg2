@@ -12,4 +12,5 @@ export interface ITrainerData {
         password: string;
         email: string;
         role: number;
+        equipos: number;
       }

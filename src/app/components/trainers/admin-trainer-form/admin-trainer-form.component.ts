@@ -9,7 +9,7 @@ import { TrainerService } from 'src/app/service/trainer.service.service';
   styleUrls: ['./admin-trainer-form.component.css']
 })
 export class AdminTrainerFormComponent implements OnInit {
-  trainer = { username: '', email: '', password: '' };
+  trainer = { username: '', email: '', password: '', role: false};
 
   constructor(private trainerService: TrainerService, private router: Router) {}
 

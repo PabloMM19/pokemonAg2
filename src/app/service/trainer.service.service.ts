@@ -30,10 +30,15 @@ export class TrainerService {
     return this.http.delete(`${this.apiUrl}/entrenador/${trainerId}`);
   }
 
-  updateTrainer(trainer: ITrainer): Observable<ITrainer> {
-    const url = `${this.apiUrl}/entrenador/${trainer.id}`;
+  getTrainerDetails(trainerId: number): Observable<ITrainer> {
+    return this.http.get<ITrainer>(`${this.apiUrl}/entrenador/${trainerId}`);
+  }
+  
+  updateTrainer(trainerId: number, trainer: ITrainer): Observable<ITrainer> {
+    const url = `${this.apiUrl}/entrenador/${trainerId}`;
     return this.http.put<ITrainer>(url, trainer);
   }
+  
 
   getTrainerById(trainerId: number): Observable<ITrainer> {
     return this.http.get<ITrainer>(`${this.apiUrl}/entrenador/${trainerId}`);

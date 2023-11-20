@@ -1,3 +1,4 @@
+import { AdminTrainerFormEComponent } from './components/trainers/admin-trainer-formE/admin-trainer-formE.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
@@ -47,7 +48,8 @@ import { AdminPokemonFormComponent } from './components/pokemon/admin-pokemon-fo
     AdminTeamEditComponent,
     AdminPokemonFormComponent,
     AdminPokemonNewComponent,
-    AdminPokemonEditComponent
+    AdminPokemonEditComponent,
+    AdminTrainerFormEComponent,
   ],
   imports: [
     BrowserModule,
