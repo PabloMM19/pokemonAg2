@@ -16,6 +16,10 @@ export class TrainerService {
     return this.http.get<ITrainerData>(`${this.apiUrl}/entrenador?page=0&size=10`);
   }
 
+  getByUsername(username: string): Observable<ITrainer> {
+    return this.http.get<ITrainer>(`${this.apiUrl}/entrenador/username/${username}`);
+  }
+
   getTrainerDataPage(pageNumber: number, pageSize: number): Observable<ITrainerData> {
     const url = `${this.apiUrl}/entrenador?page=${pageNumber}&size=${pageSize}`;
     return this.http.get<ITrainerData>(url);

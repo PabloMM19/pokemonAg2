@@ -22,8 +22,17 @@ export class PokemonService {
     return this.http.get<IPokemonData>(url);
   }
 
+  getDetailsPokemon(pokemonId: number): Observable<IPokemon> {
+    return this.http.get<IPokemon>(`${this.apiUrl}/pokemon/${pokemonId}`);
+  }
+
   createPokemon(pokemon: any): Observable<any> {
     return this.http.post(`${this.apiUrl}/pokemon`, pokemon);
+  }
+
+  updatePokemon(id: number, pokemon: IPokemon): Observable<IPokemon> {
+    const url = `${this.apiUrl}/pokemon/${id}`;
+    return this.http.put<IPokemon>(url, pokemon);
   }
 
   deletePokemon(id: number): Observable<any> {

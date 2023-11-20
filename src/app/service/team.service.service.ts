@@ -20,6 +20,15 @@ export class TeamService {
     return this.http.get<ITeamData>(url);
   }
 
+  getTeamDetails(teamId: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/equipo/${teamId}`);
+  }
+
+  updateTeam(teamId: number, team: any): Observable<any> {
+    const url = `${this.apiUrl}/equipo/${teamId}`;
+    return this.http.put(url, team);
+  }
+
   createTeam(team: any): Observable<any> {
     return this.http.post(`${this.apiUrl}/equipo`, team);
   }

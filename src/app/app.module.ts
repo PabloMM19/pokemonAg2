@@ -27,6 +27,10 @@ import { AdminTeamNewComponent } from './components/team/admin-team-new/admin-te
 import { AdminPokemonNewComponent } from './components/pokemon/admin-pokemon-new/admin-pokemon-new.component';
 import { AdminPokemonEditComponent } from './components/pokemon/admin-pokemon-edit/admin-pokemon-edit.component';
 import { AdminPokemonFormComponent } from './components/pokemon/admin-pokemon-form/admin-pokemon-form.component';
+import { AdminPokemonFormEComponent } from './components/pokemon/admin-pokemon-formE/admin-pokemon-formE.component';
+import { AdminTeamFormEComponent } from './components/team/admin-team-formE/admin-team-formE.component';
+import { TrainerLoginRoutedComponent } from './components/trainers/trainer-login-routed/trainer-login-routed.component';
+import { TrainerLoginUnroutedComponent } from './components/trainers/trainer-login-unrouted/trainer-login-unrouted.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +54,10 @@ import { AdminPokemonFormComponent } from './components/pokemon/admin-pokemon-fo
     AdminPokemonNewComponent,
     AdminPokemonEditComponent,
     AdminTrainerFormEComponent,
+    AdminPokemonFormEComponent,
+    AdminTeamFormEComponent,
+    TrainerLoginRoutedComponent,
+    TrainerLoginUnroutedComponent
   ],
   imports: [
     BrowserModule,

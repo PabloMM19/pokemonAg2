@@ -1,6 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ITrainer } from 'src/app/model/trainer.model';
 import { TrainerService } from 'src/app/service/trainer.service.service';
 @Component({
@@ -9,8 +10,6 @@ import { TrainerService } from 'src/app/service/trainer.service.service';
   styleUrls: ['./admin-trainer-formE.component.css']
 })
 export class AdminTrainerFormEComponent implements OnInit {
-  //@Input() trainer: ITrainer | undefined;
-
 
   @Input()
   set trainer(oITrainer: ITrainer | undefined) {
@@ -37,7 +36,7 @@ export class AdminTrainerFormEComponent implements OnInit {
 
   trainerForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private oTrainerService: TrainerService) {
+  constructor(private fb: FormBuilder, private oTrainerService: TrainerService, private router: Router) {
     this.trainerForm = this.fb.group({
       id: [0, Validators.required],
       username: ['', Validators.required],
@@ -65,11 +64,14 @@ export class AdminTrainerFormEComponent implements OnInit {
       this.oTrainerService.updateTrainer(this.trainerForm.get('id')?.value, this.trainerForm.value).subscribe({
         next: (data: ITrainer) => {
           console.log('Entrenador actualizado', data);
+          this.router.navigate(['/trainers']);
         },
         error: (error: HttpErrorResponse) => {
           console.error('Error al actualizar el entrenador', error);
         }
       });
+    } else {
+      console.error('El formulario no es válido');
     }
   }
 }

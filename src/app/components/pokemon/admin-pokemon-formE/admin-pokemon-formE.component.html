@@ -1,0 +1,99 @@
+<form [formGroup]="pokemonForm" (submit)="onSubmit()" style="margin-bottom: 5%;">
+  <div class="mb-3">
+    <label for="nombre" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="nombre" formControlName="nombre" name="nombre" required>
+  </div>
+  <div class="mb-3">
+    <label for="tipo1" class="form-label">Tipo primario</label>
+    <input type="text" class="form-control" id="tipo1" formControlName="tipo1" name="tipo1" required>
+  </div>
+  <div class="mb-3">
+    <label for="tipo2" class="form-label">Tipo secundario</label>
+    <input type="text" class="form-control" id="tipo2" formControlName="tipo2" name="tipo2" required>
+  </div>
+  <div class="mb-3">
+    <label for="ataque1" class="form-label">Primer ataque</label>
+    <input type="text" class="form-control" id="ataque1" formControlName="ataque1" name="ataque1" required>
+  </div>
+  <div class="mb-3">
+    <label for="ataque2" class="form-label">Segundo ataque</label>
+    <input type="text" class="form-control" id="ataque2" formControlName="ataque2" name="ataque2" required>
+  </div>
+  <div class="mb-3">
+    <label for="ataque3" class="form-label">Tercer ataque</label>
+    <input type="text" class="form-control" id="ataque3" formControlName="ataque3" name="ataque3" required>
+  </div>
+  <div class="mb-3">
+    <label for="ataque4" class="form-label">Cuarto ataque</label>
+    <input type="text" class="form-control" id="ataque4" formControlName="ataque4" name="ataque4" required>
+  </div>
+  <div>
+    <label for="generacion" class="form-label">Generacion</label>
+    <select class="form-select" aria-label="Default select example" id="generacion" formControlName="generacion" name="generacion" required>
+      <option selected>Selecciona una generacion</option>
+      <option value="1">Primera</option>
+      <option value="2">Segunda</option>
+      <option value="3">Tercera</option>
+      <option value="4">Cuarta</option>
+      <option value="5">Quinta</option>
+      <option value="6">Sexta</option>
+      <option value="7">Septima</option>
+      <option value="8">Octava</option>
+    </select>
+  </div>
+  <div>
+    <label for="habilidad" class="form-label">Habilidad</label>
+    <input type="text" class="form-control" id="habilidad" formControlName="habilidad" name="habilidad" required>
+  </div>
+  <div>
+    <label for="ataque" class="form-label">Ataque</label>
+    <input type="text" class="form-control" id="ataque" formControlName="ataque" name="ataque" required>
+  </div>
+  <div>
+    <label for="defensa" class="form-label">Defensa</label>
+    <input type="text" class="form-control" id="defensa" formControlName="defensa" name="defensa" required>
+  </div>
+  <div>
+    <label for="ataque_Especial" class="form-label">Ataque especial</label>
+    <input type="text" class="form-control" id="ataque_Especial" formControlName="ataque_Especial" name="ataque_Especial" required>
+  </div>
+  <div>
+    <label for="defensa_Especial" class="form-label">Defensa especial</label>
+    <input type="text" class="form-control" id="defensa_Especial" formControlName="defensa_Especial" name="defensa_Especial" required>
+  </div>
+  <div>
+    <label for="velocidad" class="form-label">Velocidad</label>
+    <input type="text" class="form-control" id="velocidad" formControlName="velocidad" name="velocidad" required>
+  </div>
+  <div>
+    <label for="salud" class="form-label">Vida</label>
+    <input type="text" class="form-control" id="salud" formControlName="salud" name="salud" required>
+  </div>
+  <div>
+    <label for="objeto" class="form-label">Objeto</label>
+    <input type="text" class="form-control" id="objeto" formControlName="objeto" name="objeto" required>
+  </div>
+  <div>
+    <label for="naturaleza" class="naturaleza">Naturaleza</label>
+    <select class="form-select" aria-label="Default select example" id="naturaleza" formControlName="naturaleza" name="naturaleza" required>
+      <option selected>Selecciona una naturaleza</option>
+      <option value="Audaz">Audaz</option>
+      <option value="Osada">Osada</option>
+      <option value="Cauta">Cauta</option>
+      <option value="Alegre">Alegre</option>
+      <option value="Modesta">Modesta</option>
+      <option value="Miedosa">Miedosa</option>
+      <option value="Seria">Seria</option>
+      <option value="Agitada">Agitada</option>
+      <option value="Amable">Amable</option>
+      <option value="Alocada">Alocada</option>
+      <option value="Alocada">Alocada</option>
+      <option value="Alocada">Alocada</option>
+      </select>
+  </div>
+<div>
+  <label for="nivel" class="form-label">Nivel</label>
+  <input type="text" class="form-control" id="nivel" formControlName="nivel" name="nivel" required>
+</div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
