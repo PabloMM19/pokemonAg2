@@ -9,7 +9,9 @@
   </div>
   <div class="mb-3">
     <label for="entrenador" class="form-label">Entrenador</label>
-    <input type="text" class="form-control" id="entrenador" formControlName="entrenador" name="entrenador" required>
-  </div>
+    <select class="form-control" id="entrenador" formControlName="entrenador" name="entrenador" required>
+      <option *ngFor="let trainer of trainers" [value]="trainer.id">{{ trainer.username }}</option>
+    </select>
+  </div>  
   <button type="submit" class="btn btn-primary">Enviar</button>
 </form>

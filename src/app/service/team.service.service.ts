@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ITeamData } from '../model/team.model';
 import { Observable } from 'rxjs';
+import { ITrainerData } from '../model/trainer.model';
 
 @Injectable({
   providedIn: 'root'
@@ -51,4 +52,5 @@ export class TeamService {
 
     return this.http.post(`${this.apiUrl}/equipo/populate/${amount}`, teams);
   }
+
 }

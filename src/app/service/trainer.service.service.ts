@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, catchError, tap } from 'rxjs';
 import { ITrainer, ITrainerData } from '../model/trainer.model';
 
 @Injectable({
@@ -67,4 +67,12 @@ export class TrainerService {
   deleteAllTrainers(): Observable<any> {
     return this.http.delete(`${this.apiUrl}/entrenador/empty`);
   }
+
+  getalltrainers() {
+    return this.http.get<ITrainer[]>(`${this.apiUrl}/entrenador/all`)
+      .pipe(
+        tap(data => console.log('Raw Trainer Data:', data))
+      );
+  }
+  
 }

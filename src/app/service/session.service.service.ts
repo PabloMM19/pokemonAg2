@@ -8,7 +8,7 @@ import { ITrainer } from '../model/trainer.model';
 @Injectable()
 export class SessionService {
 
-    sUrl: string = "http://localhost:8083" + "/session";
+    sUrl: string = "http://localhost:8083/session";
 
     subjectSession = new Subject<SessionEvent>();
 
@@ -86,5 +86,10 @@ export class SessionService {
             return null;
         }
     }
+
+    authenticate(username: string, password: string): Observable<any> {
+        const body = { username, password };
+        return this.oHttpClient.post(`${this.sUrl}/login`, body);
+      }
 
 }

@@ -1,7 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ITeam } from 'src/app/model/team.model';
+import { ITrainer } from 'src/app/model/trainer.model';
 import { TeamService } from 'src/app/service/team.service.service';
+import { TrainerService } from 'src/app/service/trainer.service.service';
 
 @Component({
   selector: 'app-admin-team-form',
@@ -10,12 +12,19 @@ import { TeamService } from 'src/app/service/team.service.service';
 })
 export class AdminTeamFormComponent implements OnInit {
   @Input() teamData: ITeam[] = [];
-  team = { nombre: '', descripcion: '', id_entrenador: '' };
+  team = { nombre: '', descripcion: '', entrenador: '' };
 
-  constructor(private teamService: TeamService, private router: Router) { }
+  constructor(private teamService: TeamService, private router: Router, private trainerService: TrainerService) { }
 
-  ngOnInit() {
-  }
+  trainers: ITrainer[] = [];
+
+ngOnInit() {
+  this.trainerService.getalltrainers().subscribe(
+    trainers => this.trainers = trainers,
+    error => console.error('Error fetching trainers:', error)
+  );
+}
+
 
   onSubmit() {
     this.teamService.createTeam(this.team).subscribe(() => {

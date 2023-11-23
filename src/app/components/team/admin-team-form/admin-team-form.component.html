@@ -8,8 +8,10 @@
     <input type="text" class="form-control" id="descripcion" [(ngModel)]="team.descripcion" name="descripcion" required>
   </div>
   <div class="mb-3">
-    <label for="id_entrenador" class="form-label">Entrenador</label>
-    <input type="text" class="form-control" id="id_entrenador" [(ngModel)]="team.id_entrenador" name="id_entrenador" required>
-  </div>
+    <label for="entrenador" class="form-label">Entrenador</label>
+    <select class="form-select" id="entrenador" [(ngModel)]="team.entrenador" name="entrenador" required>
+      <option *ngFor="let trainer of trainers" [ngValue]="trainer">{{ trainer.username }}</option>
+    </select>
+  </div>  
   <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
